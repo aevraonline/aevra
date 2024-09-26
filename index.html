@@ -15,19 +15,22 @@
         <header>
             <img src="images/logo.png" alt="Aevra Logo" class="logo">
             <nav>
-                <a href="index.html" class="nav-link" data-direction="right">Home</a>
-                <a href="browse.html" class="nav-link" data-direction="left">Browse Assets</a>
+                <a href="#" class="nav-link" data-page="home" data-direction="right">Home</a>
+                <a href="#" class="nav-link" data-page="browse" data-direction="left">Browse Assets</a>
             </nav>
         </header>
 
-        <!-- Hero Section -->
-        <section id="home">
-            <div class="hero-content">
-                <h1>Welcome to <span>Aevra</span></h1>
-                <p>Discover and download high-quality UI assets designed for your projects.</p>
-                <a href="browse.html" class="button" data-direction="left">Explore Assets</a>
-            </div>
-        </section>
+        <!-- Content Section -->
+        <div id="content">
+            <!-- This is where the home or browse content will be loaded -->
+            <section id="home" class="page-content">
+                <div class="hero-content">
+                    <h1>Welcome to <span>Aevra</span></h1>
+                    <p>Discover and download high-quality UI assets designed for your projects.</p>
+                    <a href="#" class="button nav-link" data-page="browse" data-direction="left">Explore Assets</a>
+                </div>
+            </section>
+        </div>
 
         <!-- Footer Section -->
         <footer>
