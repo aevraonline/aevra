@@ -7,17 +7,35 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     overflow: hidden; /* Prevent scroll during transition */
+}
+
+.menu-bar {
+    background-color: #007BFF;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-bar button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-bar button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .container {
     position: relative;
     width: 80%;
     max-width: 600px;
+    margin: 20px auto; /* Center the container */
 }
 
 .page {
@@ -28,6 +46,14 @@ body {
     left: 100%; /* Start off-screen */
     opacity: 0; /* Hidden initially */
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Full height of the page */
 }
 
 h1 {
