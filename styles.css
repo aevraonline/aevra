@@ -173,3 +173,8 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
+
+nav a.active {
+    color: #f39c12;
+    font-weight: 700;
+}
