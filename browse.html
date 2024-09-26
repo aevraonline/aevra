@@ -25,22 +25,24 @@
     <!-- Assets Section -->
     <section id="assets">
         <h2>Available UI Assets</h2>
-        <input type="text" placeholder="Search assets..." id="searchBar">
+        <input type="text" placeholder="Search assets..." id="searchBar" onkeyup="filterAssets()">
 
         <div class="assets-grid">
-            <div class="asset-card">
+            <div class="asset-card" data-name="Button UI">
                 <img src="images/button-preview.png" alt="Button UI Asset">
                 <h3>Button UI</h3>
                 <p>High-quality button design.</p>
                 <a href="downloads/button.zip" download class="download-btn">Download</a>
             </div>
 
-            <div class="asset-card">
+            <div class="asset-card" data-name="Icon Pack">
                 <img src="images/icon-preview.png" alt="Icon UI Asset">
                 <h3>Icon Pack</h3>
                 <p>Set of minimal icons.</p>
                 <a href="downloads/icons.zip" download class="download-btn">Download</a>
             </div>
+
+            <!-- Add more asset cards as needed -->
         </div>
     </section>
 
@@ -48,5 +50,26 @@
     <footer>
         <p>&copy; 2024 Aevra. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for search functionality -->
+    <script>
+        function filterAssets() {
+            // Get search input and convert it to lowercase
+            const searchInput = document.getElementById('searchBar').value.toLowerCase();
+            // Get all asset cards
+            const assetCards = document.querySelectorAll('.asset-card');
+
+            // Loop through all asset cards and filter based on the search input
+            assetCards.forEach(card => {
+                const assetName = card.getAttribute('data-name').toLowerCase();
+                // Check if the asset name includes the search input
+                if (assetName.includes(searchInput)) {
+                    card.style.display = 'block'; // Show the card if it matches
+                } else {
+                    card.style.display = 'none'; // Hide the card if it doesn't match
+                }
+            });
+        }
+    </script>
 </body>
 </html>
