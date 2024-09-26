@@ -30,11 +30,6 @@ body {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-#page1 {
-    left: 0; /* Page 1 is visible initially */
-    opacity: 1; /* Fully visible */
-}
-
 h1 {
     margin-bottom: 20px;
 }
