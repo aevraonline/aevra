@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Assets Download</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>UI Assets Hub</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#assets">Browse Assets</a>
+        </nav>
+    </header>
 
+    <section id="home">
+        <h2>Welcome to UI Assets Hub</h2>
+        <p>Download high-quality UI assets for your projects.</p>
+        <a href="#assets" class="button">Browse Assets</a>
+    </section>
+
+    <section id="assets">
+        <h2>Available UI Assets</h2>
+        <input type="text" placeholder="Search assets..." id="searchBar">
+
+        <div class="assets-grid">
+            <!-- Each asset card -->
+            <div class="asset-card">
+                <img src="button-preview.png" alt="Button UI Asset">
+                <h3>Button UI</h3>
+                <p>High-quality button design.</p>
+                <a href="downloads/button.zip" download>Download</a>
+            </div>
+
+            <div class="asset-card">
+                <img src="icon-preview.png" alt="Icon UI Asset">
+                <h3>Icon Pack</h3>
+                <p>Set of minimal icons.</p>
+                <a href="downloads/icons.zip" download>Download</a>
+            </div>
+            <!-- Add more assets here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 UI Assets Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
