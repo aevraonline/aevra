@@ -3,41 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aevra - Modern UI Asset Downloads</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Two Page Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Wrapper for sliding effect -->
-    <div id="page-wrapper">
-        <!-- Header Section -->
-        <header>
-            <img src="images/logo.png" alt="Aevra Logo" class="logo">
-            <nav>
-                <a href="#" class="nav-link" data-page="home" data-direction="right">Home</a>
-                <a href="#" class="nav-link" data-page="browse" data-direction="left">Browse Assets</a>
-            </nav>
-        </header>
-
-        <!-- Content Section -->
-        <div id="content">
-            <!-- This is where the home or browse content will be loaded -->
-            <section id="home" class="page-content">
-                <div class="hero-content">
-                    <h1>Welcome to <span>Aevra</span></h1>
-                    <p>Discover and download high-quality UI assets designed for your projects.</p>
-                    <a href="#" class="button nav-link" data-page="browse" data-direction="left">Explore Assets</a>
-                </div>
-            </section>
+    <div class="container">
+        <div class="page" id="page1">
+            <h1>Welcome to Page 1</h1>
+            <p>This is the first page of the website.</p>
+            <button onclick="transitionToPage('page2')">Go to Page 2</button>
         </div>
-
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2024 Aevra. All rights reserved.</p>
-        </footer>
+        <div class="page" id="page2" style="display: none;">
+            <h1>Welcome to Page 2</h1>
+            <p>This is the second page of the website.</p>
+            <button onclick="transitionToPage('page1')">Go to Page 1</button>
+        </div>
     </div>
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
