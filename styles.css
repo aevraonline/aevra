@@ -178,3 +178,7 @@ nav a.active {
     color: #f39c12;
     font-weight: 700;
 }
+
+.asset-card {
+    transition: all 0.3s ease-in-out;
+}
