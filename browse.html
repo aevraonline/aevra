@@ -4,72 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aevra - Browse UI Assets</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <!-- Aevra Logo -->
-        <img src="images/logo.png" alt="Aevra Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="browse.html" class="active">Browse Assets</a>
-        </nav>
-    </header>
+    <!-- Wrapper for sliding effect -->
+    <div id="page-wrapper">
+        <!-- Header Section -->
+        <header>
+            <img src="images/logo.png" alt="Aevra Logo" class="logo">
+            <nav>
+                <a href="index.html" class="nav-link" data-direction="right">Home</a>
+                <a href="browse.html" class="nav-link active" data-direction="left">Browse Assets</a>
+            </nav>
+        </header>
 
-    <!-- Assets Section -->
-    <section id="assets">
-        <h2>Available UI Assets</h2>
-        <input type="text" placeholder="Search assets..." id="searchBar" onkeyup="filterAssets()">
+        <!-- Assets Section -->
+        <section id="assets">
+            <h2>Available UI Assets</h2>
+            <input type="text" placeholder="Search assets..." id="searchBar" onkeyup="filterAssets()">
 
-        <div class="assets-grid">
-            <div class="asset-card" data-name="Button UI">
-                <img src="images/button-preview.png" alt="Button UI Asset">
-                <h3>Button UI</h3>
-                <p>High-quality button design.</p>
-                <a href="downloads/button.zip" download class="download-btn">Download</a>
+            <div class="assets-grid">
+                <div class="asset-card" data-name="Button UI">
+                    <img src="images/button-preview.png" alt="Button UI Asset">
+                    <h3>Button UI</h3>
+                    <p>High-quality button design.</p>
+                    <a href="downloads/button.zip" download class="download-btn">Download</a>
+                </div>
+
+                <div class="asset-card" data-name="Icon Pack">
+                    <img src="images/icon-preview.png" alt="Icon UI Asset">
+                    <h3>Icon Pack</h3>
+                    <p>Set of minimal icons.</p>
+                    <a href="downloads/icons.zip" download class="download-btn">Download</a>
+                </div>
             </div>
+        </section>
 
-            <div class="asset-card" data-name="Icon Pack">
-                <img src="images/icon-preview.png" alt="Icon UI Asset">
-                <h3>Icon Pack</h3>
-                <p>Set of minimal icons.</p>
-                <a href="downloads/icons.zip" download class="download-btn">Download</a>
-            </div>
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Aevra. All rights reserved.</p>
+        </footer>
+    </div>
 
-            <!-- Add more asset cards as needed -->
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Aevra. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript for search functionality -->
-    <script>
-        function filterAssets() {
-            // Get search input and convert it to lowercase
-            const searchInput = document.getElementById('searchBar').value.toLowerCase();
-            // Get all asset cards
-            const assetCards = document.querySelectorAll('.asset-card');
-
-            // Loop through all asset cards and filter based on the search input
-            assetCards.forEach(card => {
-                const assetName = card.getAttribute('data-name').toLowerCase();
-                // Check if the asset name includes the search input
-                if (assetName.includes(searchInput)) {
-                    card.style.display = 'block'; // Show the card if it matches
-                } else {
-                    card.style.display = 'none'; // Hide the card if it doesn't match
-                }
-            });
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
